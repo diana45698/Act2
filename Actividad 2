@@ -1,0 +1,35 @@
+public class Estudiante {
+    private String nombre;
+    private int edad;
+    private String matricula;
+
+    // Constructor
+    public Estudiante(String nombre, int edad, String matricula) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.matricula = matricula;
+    }
+
+    // Método para mostrar información del estudiante
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad);
+        System.out.println("Matrícula: " + matricula);
+    }
+
+    // Método para actualizar la edad del estudiante
+    public void actualizarEdad(int nuevaEdad) {
+        this.edad = nuevaEdad;
+    }
+
+    // Método principal para prueba
+    public static void main(String[] args) {
+        Estudiante estudiante1 = new Estudiante("Juan Pérez", 20, "A12345");
+        estudiante1.mostrarInformacion();
+
+        // Actualizar la edad del estudiante
+        estudiante1.actualizarEdad(21);
+        System.out.println("\nDespués de actualizar la edad:");
+        estudiante1.mostrarInformacion();
+    }
+}
